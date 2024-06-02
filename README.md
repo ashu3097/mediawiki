@@ -50,6 +50,25 @@ docker tag ashu3456 ashuop/ashu3456
  ![image](https://github.com/ashu3097/mediawiki/assets/143991896/597b5c6e-d379-4daf-a388-08b7f747c0a5)
 
 
+create a aks cluster and install azure cli , kubectl and helm on the centos:
+
+login to your azure account:
+
+az login
+
+connect to your aks cluster
+
+az aks get-credentials --resource-group aks-demo --name myaks
+
+create helm directory using helm:
+
+helm create my-chart
+cd my-chart
+
+
+update the files as shared in the repository
+
+
 
 
 
