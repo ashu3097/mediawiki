@@ -68,6 +68,29 @@ cd my-chart
 
 update the files as shared in the repository
 
+then run the command:
+helm install my-release ./ --set image.repository=ashuop/ashu3456,image.tag=latest
+
+verify the deployment:
+kubectl get pods
+
+Once the blue deployment is verified to be working correctly, deploy the green deployment:
+
+helm upgrade --install green ./blue-green --set blue.replicaCount=0
+
+kubectl get pods -l app=blue-green,version=green
+
+
+Verify that the green deployment is accessible:
+
+kubectl get services blue-green
+
+kubectl apply -f ./blue-green/templates/ingress.yaml
+
+kubectl get ingress
+
+
+
 
 
 
