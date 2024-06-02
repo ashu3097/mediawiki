@@ -1,14 +1,14 @@
 blue:
   replicaCount: 3
   image:
-    repository: your-repo/blue-image
+    repository: ashuop/ashu3456
     tag: latest
     pullPolicy: IfNotPresent
 
 green:
   replicaCount: 3
   image:
-    repository: your-repo/green-image
+    repository: ashuop/ashu3456
     tag: latest
     pullPolicy: IfNotPresent
 
