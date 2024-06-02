@@ -1,0 +1,10 @@
+# values.yaml
+
+image:
+  repository: ashuop/ashu3456
+  tag: latest
+
+strategy:
+  type: blue-green
+  blueReplicas: 1
+  greenReplicas: 1
