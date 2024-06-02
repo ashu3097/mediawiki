@@ -1,10 +1,24 @@
-# values.yaml
+blue:
+  replicaCount: 3
+  image:
+    repository: your-repo/blue-image
+    tag: latest
+    pullPolicy: IfNotPresent
 
-image:
-  repository: ashuop/ashu3456
-  tag: latest
+green:
+  replicaCount: 3
+  image:
+    repository: your-repo/green-image
+    tag: latest
+    pullPolicy: IfNotPresent
 
-strategy:
-  type: blue-green
-  blueReplicas: 1
-  greenReplicas: 1
+service:
+  name: blue-green
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  hosts:
+    - host: blue-green.example.com
+      paths: ["/"]
